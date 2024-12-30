@@ -114,8 +114,10 @@ let tempArray = [];
 let xCount = 0;
 collect = () => {
   for (let i = 0; i < area.children.length; i++) {
-    if (isNaN(area.children[i].innerText) == true) {
-      tempArray.push(parseInt(area.children[i].innerText.trim()));
+    let currentValue = area.children[i].innerText.trim();
+
+    if (/^[1-9]$/.test(currentValue)) {
+      tempArray.push(parseInt(currentValue));
     } else {
       tempArray.push(-1);
     }
