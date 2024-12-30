@@ -1,0 +1,53 @@
+.cell{
+    background-color: white;
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    color: black;
+    border: 1px solid black;
+    text-align: center;
+    outline: none;
+}
+
+.cell:invalid{
+    border: 1px solid red;
+}
+
+#gameArea{
+    height: 20rem;
+    width: 20rem;
+    position: relative;
+    top: 2rem;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(Images/Design.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.leftBorder{
+    border-left-width: 3px;
+    border-left-color: black;
+}
+
+.topBorder{
+    border-top-width: 3px;
+    border-top-color: black;
+}
+
+#startButton{
+    height: 2rem;
+    width: 4rem;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    position: relative;
+    top: 2rem;
+}
