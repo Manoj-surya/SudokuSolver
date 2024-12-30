@@ -59,8 +59,8 @@ isDuplicate = (row, column, value) => {
   let startRow = Math.floor(row / 3) * 3;
   let startColumn = Math.floor(column / 3) * 3;
 
-  for (let i = 0; i <= startRow; i++) {
-    for (let j = 0; j <= startColumn; j++) {
+  for (let i = startRow; i < startRow + 3; i++) {
+    for (let j = startColumn; j < startColumn + 3; j++) {
       if (
         area.children[9 * i + j].innerText === value &&
         (i !== row || j !== column)
