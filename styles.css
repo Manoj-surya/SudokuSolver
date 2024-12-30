@@ -28,6 +28,8 @@ body{
     background-image: url(Images/Design.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .leftBorder{
@@ -43,7 +45,7 @@ body{
 #startButton{
     height: 2rem;
     width: 4rem;
-    background-color: #0d6efd;
+    background-color: #5C2D91;
     color: white;
     border: none;
     border-radius: 20px;

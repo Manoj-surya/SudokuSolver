@@ -24,7 +24,7 @@ for (let i = 0; i < 9; i++) {
         if (/^[1-9]$/.test(cellvalue)) {
           if (isDuplicate(i, j, cellvalue)) {
             cell.innerText = ""; // Clear invalid input
-            alert("Duplicate Value in row or column");
+            alert("Duplicate Value in row / column / grid");
           } else {
             cell.style.borderColor = "black";
           }
@@ -51,6 +51,22 @@ isDuplicate = (row, column, value) => {
   for (let i = 0; i < 9; i++) {
     if (area.children[9 * i + column].innerText === value && i !== row) {
       return true;
+    }
+  }
+
+  //checkmatrix
+
+  let startRow = Math.floor(row / 3) * 3;
+  let startColumn = Math.floor(column / 3) * 3;
+
+  for (let i = 0; i <= startRow; i++) {
+    for (let j = 0; j <= startColumn; j++) {
+      if (
+        area.children[9 * i + j].innerText === value &&
+        (i !== row || j !== column)
+      ) {
+        return true;
+      }
     }
   }
 
@@ -119,7 +135,6 @@ collect = () => {
       }
     }
   }
-  let tempgrid = grid;
   console.log(grid);
   console.log(xCount);
 };
